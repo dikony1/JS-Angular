@@ -1,0 +1,89 @@
+<div class="main_page_img">
+  <img class="images" [src]="this.link_img" alt="main">
+  <div class="search-page">
+    <div class="search-page-inner">
+      <p class="quote">Tour Kazakhstan</p>
+    </div>
+  </div>
+  <div class="advantages">
+    <div class="why-us">
+      <div class="title_why_us">
+        <h2>{{title}}</h2>
+        <p class="subtitle">{{mission}}</p>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <img src="assets/img_3.png" alt="Сопровождение" class="icon">
+          <h3>Full Support</h3>
+          <p class="feature_text">Our staff will assist you at any stage of the visa process: from consultation on visa type selection and document collection to filling out immigration forms.</p>
+        </div>
+        <div class="feature">
+          <img src="assets/img.png" alt="87% получили визы" class="icon">
+          <h3>87% of Clients Got Their Visas</h3>
+          <p class="feature_text">Thanks to the high-quality work of our staff, most clients successfully obtain their visas. We strive to help every applicant.</p>
+        </div>
+        <div class="feature">
+          <img src="assets/img_2.png" alt="Быстро" class="icon">
+          <h3>We Process Fast</h3>
+          <p class="feature_text">No matter the purpose of your trip—tourism, study, or business—we will process your application quickly and efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="about_agency">
+    <div class="visa-section">
+      <div class="images-container">
+        <img src="assets/img1.jpg" alt="Пагода" class="image image-left">
+        <img src="assets/img2.jpg" alt="Круизный лайнер" class="image image-center">
+        <video #videoElement class="image image-right" controls autoplay muted loop poster="assets/4812203-hd_1080_1920_30fps.mp4" playsinline preload="auto">
+          <source src="assets/4812203-hd_1080_1920_30fps.mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+      </div>
+      <div class="text-container">
+        <h2>Over 800 Visas Processed</h2>
+        <p>Every day, people with different purposes—tourism, education, work—come to us for high-quality visa processing.</p>
+        <p class="bold-text">We will help you find your ideal vacation destination.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="open-modal-btn" (click)="openModal()">Open the form</button>
+
+<!-- Модальное окно -->
+<div class="modal" *ngIf="isModalOpen">
+    <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <h2>Interactive form</h2>
+
+        <!-- Лайки -->
+        <div class="form-section">
+            <button class="like-btn" (click)="like()">I like</button>
+            <span>likes: {{ likes }}</span>
+        </div>
+
+        <!-- Показать/скрыть сообщение -->
+        <div class="form-section">
+            <button class="toggle-btn" (click)="toggleMessage()">Show/ hide message</button>
+            <p *ngIf="messageVisible" class="message">Thank you for visiting!</p>
+        </div>
+
+        <!-- Ввод имени -->
+        <div class="form-section">
+            <input [(ngModel)]="name" placeholder="Enter your name" class="input-field">
+            <p *ngIf="name" class="preview">Hi, {{ name }}!</p>
+        </div>
+
+        <!-- Ввод email -->
+        <div class="form-section">
+            <input [(ngModel)]="email" placeholder="Enter your email address" class="input-field">
+            <button class="subscribe-btn" (click)="subscribe()">Subscribe</button>
+            <p *ngIf="subscribed" class="subscribed">Thanks, {{ email }}, We'll be in touch!</p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- some changes sjhbhbwgvdcwvyqwcywi-->
